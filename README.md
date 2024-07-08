@@ -1,4 +1,5 @@
-# calcular
+# login-y-encuesta-con-Bootstrap
+
 Este proyecto se ha generado utilizando [Angular CLI](https://github.com/angular/angular-cli) versión 17.3.4. 
 Al descargarlo, es posible que los Node packages no estén instalados inicialmente. 
 Para poner en funcionamiento la aplicación, es necesario ejecutar el comando npm install. 
