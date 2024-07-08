@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Formulario Universidad Veracruzana</h1>
+  <form (submit)="onSubmit($event)">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="nameInput" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="generationSelect" class="form-label">Generación:</label>
+      <select class="form-select" id="generationSelect" name="generation" required>
+        <option value="s19">S19</option>
+        <option value="s20">S20</option>
+        <option value="s21">S21</option>
+        <option value="s22">S22</option>
+        <option value="s23">S23</option>
+        <option value="s24">S24</option>
+        <option value="s25">S25</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="careerSelect" class="form-label">Licenciatura:</label>
+      <select class="form-select" id="careerSelect" name="career" required>
+        <option value="Administración">Administración</option>
+        <option value="Contaduría">Contaduría</option>
+        <option value="Gestión y Dirección de Negocios">Gestión y Dirección de Negocios</option>
+        <option value="Sistemas Computacionales Administrativos">Sistemas Computacionales Administrativos</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="messageTextarea" class="form-label">¿Por qué elegiste la Universidad Veracruzana?</label>
+      <textarea class="form-control" id="messageTextarea" name="message" rows="4"></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Intereses Académicos:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="interest1Checkbox" name="academicInterests" value="Matemáticas">
+        <label class="form-check-label" for="interest1Checkbox">Matemáticas</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="interest2Checkbox" name="academicInterests" value="Ciencias">
+        <label class="form-check-label" for="interest2Checkbox">Ciencias</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="interest3Checkbox" name="academicInterests" value="Contaduría">
+        <label class="form-check-label" for="interest3Checkbox">Contaduría</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="interest4Checkbox" name="academicInterests" value="Programación">
+        <label class="form-check-label" for="interest4Checkbox">Programación</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="interest5Checkbox" name="academicInterests" value="Economía">
+        <label class="form-check-label" for="interest5Checkbox">Economía</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="interest6Checkbox" name="academicInterests" value="Inglés">
+        <label class="form-check-label" for="interest6Checkbox">Inglés</label>
+      </div>
+      <!-- Agrega más opciones según sea necesario -->
+    </div>
+    <div class="mb-3">
+      <label for="birthdateInput" class="form-label">Fecha de Nacimiento:</label>
+      <input type="date" class="form-control" id="birthdateInput" name="birthdate" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Capturar Datos</button>
+  </form>
+</div>
+
+<!-- Ventana emergente -->
+<div *ngIf="showPopup" class="popup">
+  <div class="popup-content">
+    <h3>Datos capturados</h3>
+    <p><strong>Nombre:</strong> {{responseData.name}}</p>
+    <p><strong>Generación:</strong> {{responseData.generation}}</p>
+    <p><strong>Carrera:</strong> {{responseData.career}}</p>
+    <p><strong>Mensaje:</strong> {{responseData.message}}</p>
+    <p><strong>Intereses Académicos:</strong> {{responseData.academicInterests.join(', ')}}</p>
+    <p><strong>Fecha de Nacimiento:</strong> {{responseData.birthdate}}</p>
+    <button (click)="closePopup()" class="btn btn-secondary">Cerrar</button>
+  </div>
+</div>

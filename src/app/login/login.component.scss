@@ -1,0 +1,85 @@
+// Estilos para el cuerpo
+body {
+  background-color: #f8f9fa; /* Cambiar el color de fondo */
+  font-family: Arial, sans-serif; /* Utilizar la fuente Arial o una fuente sans-serif genérica */
+}
+
+// Estilos para el contenedor principal
+.container {
+  position: relative; /* Posición relativa para que el botón pueda ser posicionado absolutamente dentro de él */
+  max-width: 400px; /* Ajustar el ancho del contenedor */
+  margin: 100px auto; /* Centrar el contenedor vertical y horizontalmente */
+  padding: 0 20px; /* Agregar un relleno a los lados del contenedor */
+
+  // Estilos para el encabezado
+  .text-center {
+    text-align: center; /* Centrar el texto */
+
+    h2 {
+      color: #67666E; /* Cambiar el color del texto */
+      font-size: 26px; /* Ajustar el tamaño de la fuente */
+      margin-bottom: 26px; /* Ajustar el margen inferior */
+    }
+
+    .favicon {
+      margin-right: 10px; /* Ajustar el margen derecho */
+    }
+  }
+}
+
+// Estilos para los campos de formulario
+.form-control {
+  border-radius: 5px; /* Agregar bordes redondeados a los campos */
+}
+
+// Estilos para el botón de iniciar sesión
+.btn-primary {
+  border-radius: 5px; /* Agregar bordes redondeados al botón */
+  width: 100%; /* Hacer que el botón ocupe todo el ancho del contenedor */
+  background-color: #22891F; /* Cambiar el color de fondo del botón */
+  border-color: #28a745; /* Cambiar el color del borde del botón */
+
+  &:hover {
+    background-color: #208030; /* Cambiar el color de fondo del botón a un tono más oscuro de verde al pasar el ratón */
+    border-color: #1e7e34; /* Cambiar el color del borde del botón a un tono más oscuro de verde al pasar el ratón */
+  }
+}
+
+// Estilos para el botón de nuevos usuarios
+.btn-new-user {
+  position: absolute; /* Posición absoluta para colocar el botón */
+  bottom: 10px; /* Espacio desde la parte inferior */
+  right: 10px; /* Espacio desde la parte derecha */
+  background-color: rgba(10, 200, 10, 0.5); /* Color de fondo traslúcido */
+  color: white; /* Color de texto */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+
+  &:hover {
+    background-color: rgba(20, 150, 200, 0.8); /* Cambiar el color de fondo al pasar el ratón */
+  }
+}
+
+// Estilos para la ventana emergente
+.popup {
+  position: fixed; /* Posición fija para cubrir toda la pantalla */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: flex; /* Flexbox para centrar vertical y horizontalmente */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white; /* Fondo blanco */
+  padding: 2rem; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center; /* Alinear contenido al centro */
+}
+
+.btn-secondary {
+  margin-top: 1rem; /* Espacio superior para el botón */
+}
